@@ -12,21 +12,52 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            CircularBarView(percentage: percentage)
             Spacer()
-            Button(action: {
-                guard percentage < 100 else { return }
-                percentage += 10
-            }) {
-                HStack(spacing: 10) {
-                    Image(systemName: "plus.circle.fill")
-                        .foregroundColor(.blue)
-                        .frame(width: 60, height: 60)
-                    Text("Add 10% progress")
-                        .font(.body)
+            CircularBarView(percentage: percentage)
+                .frame(width: 150, height: 150)
+            Spacer()
+            
+            ProgressBarControls(progressPercentage: $percentage)
+        }
+    }
+}
+
+struct ProgressBarControls: View {
+    @Binding var progressPercentage: Double
+    
+    var body: some View {
+        VStack {
+            Text("Tap to increase or reduce progress")
+                .font(.callout)
+            
+            HStack {
+                //Reduce progress
+                Button(action: {
+                    guard progressPercentage > 0 else { return }
+                    progressPercentage -= 10
+                }) {
+                    HStack(spacing: 10) {
+                        Image(systemName: "minus.circle.fill")
+                            .resizable()
+                            .foregroundColor(.blue)
+                            .frame(width: 40, height: 40)
+                    }
+                }
+                //Add progress
+                Button(action: {
+                    guard progressPercentage < 100 else { return }
+                    progressPercentage += 10
+                }) {
+                    HStack(spacing: 10) {
+                        Image(systemName: "plus.circle.fill")
+                            .resizable()
+                            .foregroundColor(.blue)
+                            .frame(width: 40, height: 40)
+                    }
                 }
             }
         }
+        .padding(.vertical, 10)
     }
 }
 
