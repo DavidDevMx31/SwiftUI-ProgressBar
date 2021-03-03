@@ -10,6 +10,7 @@ import SwiftUI
 struct CircularBarView: View {
     var percentage: Double = 0
     var barLineWidth: CGFloat = 20
+    var barColor: Color = Color.purple
     
     var trimPercentage: Double {
         percentage * 0.01
@@ -20,12 +21,12 @@ struct CircularBarView: View {
             Circle()
                 .stroke(lineWidth: barLineWidth)
                 .opacity(0.3)
-                .foregroundColor(.purple)
+                .foregroundColor(barColor)
             
             Circle()
                 .trim(from: 0, to: CGFloat(trimPercentage))
                 .stroke(style: StrokeStyle(lineWidth: barLineWidth, lineCap: .round, lineJoin: .round))
-                .foregroundColor(.purple)
+                .foregroundColor(barColor)
                 .animation(.linear)
             
             BarLabel(percentage: percentage)
