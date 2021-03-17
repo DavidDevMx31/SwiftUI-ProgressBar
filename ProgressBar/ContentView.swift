@@ -13,10 +13,10 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Spacer()
-            LinearBarView(progressPercentage: percentage)
+            LinearProgressBarView(progressPercentage: percentage)
                 .frame(height: 30)
             Spacer()
-            CircularBarView(percentage: percentage, barColor: .blue)
+            RingProgressBarView(percentage: percentage, barColor: .blue)
                 .frame(width: 150, height: 150)
                 
             Spacer()

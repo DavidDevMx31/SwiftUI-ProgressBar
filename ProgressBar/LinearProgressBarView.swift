@@ -1,5 +1,5 @@
 //
-//  LinearBarView.swift
+//  LinearProgressBarView.swift
 //  ProgressBar
 //
 //  Created by David Ali on 02/03/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LinearBarView: View {
+struct LinearProgressBarView: View {
     var progressPercentage: Double
     var barCornerRadius: CGFloat = 10
     var barColors: [Color] = [Color.blue]

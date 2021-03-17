@@ -11,8 +11,8 @@
 		B4B7A11525EEE74800719064 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B7A11425EEE74800719064 /* ContentView.swift */; };
 		B4B7A11725EEE74A00719064 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4B7A11625EEE74A00719064 /* Assets.xcassets */; };
 		B4B7A11A25EEE74A00719064 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4B7A11925EEE74A00719064 /* Preview Assets.xcassets */; };
-		B4B7A12725EEF13300719064 /* CircularBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B7A12625EEF13300719064 /* CircularBarView.swift */; };
-		B4B7A12D25EF035E00719064 /* LinearBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B7A12C25EF035E00719064 /* LinearBarView.swift */; };
+		B4B7A12725EEF13300719064 /* RingProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B7A12625EEF13300719064 /* RingProgressBarView.swift */; };
+		B4B7A12D25EF035E00719064 /* LinearProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B7A12C25EF035E00719064 /* LinearProgressBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +22,8 @@
 		B4B7A11625EEE74A00719064 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4B7A11925EEE74A00719064 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B4B7A11B25EEE74A00719064 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B4B7A12625EEF13300719064 /* CircularBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularBarView.swift; sourceTree = "<group>"; };
-		B4B7A12C25EF035E00719064 /* LinearBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearBarView.swift; sourceTree = "<group>"; };
+		B4B7A12625EEF13300719064 /* RingProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingProgressBarView.swift; sourceTree = "<group>"; };
+		B4B7A12C25EF035E00719064 /* LinearProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearProgressBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +56,9 @@
 		B4B7A11125EEE74800719064 /* ProgressBar */ = {
 			isa = PBXGroup;
 			children = (
-				B4B7A12625EEF13300719064 /* CircularBarView.swift */,
+				B4B7A12625EEF13300719064 /* RingProgressBarView.swift */,
 				B4B7A11425EEE74800719064 /* ContentView.swift */,
-				B4B7A12C25EF035E00719064 /* LinearBarView.swift */,
+				B4B7A12C25EF035E00719064 /* LinearProgressBarView.swift */,
 				B4B7A11225EEE74800719064 /* ProgressBarApp.swift */,
 				B4B7A11625EEE74A00719064 /* Assets.xcassets */,
 				B4B7A11B25EEE74A00719064 /* Info.plist */,
@@ -145,8 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4B7A11525EEE74800719064 /* ContentView.swift in Sources */,
-				B4B7A12D25EF035E00719064 /* LinearBarView.swift in Sources */,
-				B4B7A12725EEF13300719064 /* CircularBarView.swift in Sources */,
+				B4B7A12D25EF035E00719064 /* LinearProgressBarView.swift in Sources */,
+				B4B7A12725EEF13300719064 /* RingProgressBarView.swift in Sources */,
 				B4B7A11325EEE74800719064 /* ProgressBarApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

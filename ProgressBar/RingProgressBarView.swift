@@ -1,5 +1,5 @@
 //
-//  CircularBarView.swift
+//  RingProgressBarView.swift
 //  ProgressBar
 //
 //  Created by David Ali on 02/03/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CircularBarView: View {
+struct RingProgressBarView: View {
     var percentage: Double = 0
     var barLineWidth: CGFloat = 20
     var barColor: Color = Color.purple
