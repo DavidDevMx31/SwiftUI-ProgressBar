@@ -9,37 +9,37 @@ import SwiftUI
 
 struct LinearBarView: View {
     var progressPercentage: Double
-    var barWidth: CGFloat
-    var barHeight: CGFloat = 25
     var barCornerRadius: CGFloat = 10
     var barColors: [Color] = [Color.blue]
     var barBackgroundColor: Color = Color.secondary
+    var percentageLabelColor: Color = Color.black
     
     private var percentageString: String {
         String(format: "%0.f", progressPercentage)
     }
     
     var body: some View {
-        VStack {
+        GeometryReader { geoReader in
             ZStack(alignment: .leading) {
                 Rectangle()
                     .foregroundColor(barBackgroundColor)
-                    .opacity(0.7)
-                    .frame(width: barWidth, height: barHeight)
+                    .opacity(0.6)
+                    .frame(width: geoReader.size.width, height: geoReader.size.height)
                     .cornerRadius(barCornerRadius)
                 
                 LinearGradient(gradient: Gradient(colors: barColors), startPoint: .leading, endPoint: .trailing)
-                    .frame(width: getProgressGradientWidth(progress: CGFloat(progressPercentage), totalWidth: barWidth), height: barHeight)
+                    .frame(width: getProgressGradientWidth(progress: CGFloat(progressPercentage), totalWidth: geoReader.size.width), height: geoReader.size.height)
                     .cornerRadius(barCornerRadius)
                     .animation(.linear)
+                
+                HStack(alignment: .center) {
+                    Text(percentageString + "%")
+                        .font(.footnote)
+                        .fontWeight(.semibold)
+                        .foregroundColor(percentageLabelColor)
+                }
+                .frame(maxWidth: .infinity)
             }
-            
-            HStack(alignment: .center) {
-                Text(percentageString + "%")
-                    .font(.footnote)
-                    .fontWeight(.regular)
-            }
-            .frame(maxWidth: .infinity)
         }
     }
     
