@@ -15,6 +15,7 @@ struct ContentView: View {
             Spacer()
             LinearProgressBarView(progressPercentage: percentage)
                 .frame(height: 30)
+                .padding(.horizontal, 20)
             Spacer()
             RingProgressBarView(percentage: percentage, barColor: .blue)
                 .frame(width: 150, height: 150)
